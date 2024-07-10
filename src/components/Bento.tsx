@@ -17,6 +17,8 @@ import AnimatedBeamMultipleOutputDemo from "@/components/animated-beam-multiple-
 import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
 import Marquee from "@/components/magicui/marquee";
 import Globe from "./magicui/globe";
+import { AnimatedBeamDemo } from "./bi-directional";
+import { GridPatternDashed } from "./grid-pattern";
 
 const files = [
   {
@@ -187,8 +189,7 @@ const features = [
     cta: "Learn more",
     className: "col-span-3 lg:col-span-2",
     background: (
-      
-        <Globe/>
+      <AnimatedBeamDemo/>
     ),  
   },
   {

@@ -18,6 +18,9 @@ import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import DotPattern from "@/components/DotPattern";
+import { AnimatedBeamDemo } from "@/components/bi-directional";
+
+
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -49,48 +52,93 @@ const slugs = [
 
 export default function Page() {
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-10">
+    <main className="flex flex-col min-h-[100dvh]">
       <div className="absolute inset-0 z-0">
         <DotPattern />
       </div>
       <section id="hero">
-        <div className="mx-auto w-full max-w-2xl space-y-8">
+        <div className="mx-auto w-full max-w-2xl">
           <div className="gap-2 flex justify-between">
             <div className="flex-col flex flex-1 space-y-1.5">
               <section id="bentogrid">
-            <SparklesText text={"Hello"}></SparklesText>
-              <BentoDemo/>
+                <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                  <div className="space-y-2">
+                    <div className="space-y-12 w-full py-12">
+                      <BlurFade delay={BLUR_FADE_DELAY * 11}>
+                        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                          <div className="space-y-2">
+                            <div className="inline-block rounded-lg text-background px-3 py-1 text-xl">
+                              <AnimatedShinyTextDemo />
+                            </div>
+                            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                              Voici nos derniers projets
+                            </h2>
+                            <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                              I&apos;ve worked on a variety of projects, from simple
+                              websites to complex web applications. Here are a few of my
+                              favorites.
+                            </p>
+                          </div>
+                          
+                          <BentoDemo />
+                        </div>
+                      </BlurFade>
+                    </div>
+                    <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl pt-4">
+                              Voici nos derniers projets
+                            </h2>
+                            <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed pb-4">
+                              I&apos;ve worked on a variety of projects, from simple
+                              websites to complex web applications. Here are a few of my
+                              favorites.
+                            </p>
+                    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
+                      
+                      {DATA.projects.map((project, id) => (
+                        <BlurFade
+                          key={project.title}
+                          delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+                        >
+                          <ProjectCard
+                            href={project.href}
+                            key={project.title}
+                            title={project.title}
+                            description={project.description}
+                            dates={project.dates}
+                            tags={project.technologies}
+                            image={project.image}
+                            video={project.video}
+                            links={project.links}
+                          />
+                        </BlurFade>
+                      ))}
+                    </div>
+                  </div>
+
+                </div>
+
+                
               </section>
             </div>
           </div>
         </div>
         <section id="skills">
-        <div className="flex min-h-0 flex-col gap-y-3 py-8">
-          <BlurFade delay={BLUR_FADE_DELAY * 9}>
-            <h2 className="text-xl font-bold">Skills</h2>
-          </BlurFade>
-          <div className="flex flex-wrap gap-1">
-            {DATA.skills.map((skill, id) => (
-              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge key={skill}>{skill}</Badge>
-              </BlurFade>
-            ))}
+          <div className="flex min-h-0 flex-col gap-y-3 py-8">
+            <BlurFade delay={BLUR_FADE_DELAY * 9}>
+              <SparklesText text={"Skills"} className="text-3xl"></SparklesText>
+            </BlurFade>
+            <div className="flex flex-wrap gap-1">
+              {DATA.skills.map((skill, id) => (
+                <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
+                  <Badge key={skill}>{skill}</Badge>
+
+                </BlurFade>
+              ))}
+              <IconCloud iconSlugs={slugs}></IconCloud>
+            </div>
           </div>
-        </div>
+        </section>
       </section>
-      </section>
-      {/*
-       <AnimatedShinyTextDemo/>
-      <section id="about">
-        <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-xl font-bold">About</h2>
-        </BlurFade>
-        <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-            {DATA.summary}
-          </Markdown>
-        </BlurFade>
-      </section>*/}
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
@@ -139,52 +187,7 @@ export default function Page() {
           ))}
         </div>
       </section>
-     
-      <section id="projects">
-        <div className="space-y-12 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 11}>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  My Projects
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Check out my latest work
-                </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve worked on a variety of projects, from simple
-                  websites to complex web applications. Here are a few of my
-                  favorites.
-                </p>
-              </div>
-            </div>
-          </BlurFade>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-            {DATA.projects.map((project, id) => (
-              <BlurFade
-                key={project.title}
-                delay={BLUR_FADE_DELAY * 12 + id * 0.05}
-              >
-                <ProjectCard
-                  href={project.href}
-                  key={project.title}
-                  title={project.title}
-                  description={project.description}
-                  dates={project.dates}
-                  tags={project.technologies}
-                  image={project.image}
-                  video={project.video}
-                  links={project.links}
-                />
-              </BlurFade>
-            ))}
-          </div>
-        </div>
-      </section>
-      <section id="globe">
-      <IconCloud  iconSlugs={slugs}></IconCloud>
-      </section>
-    {/*
+      {/*
       <section id="hackathons">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>

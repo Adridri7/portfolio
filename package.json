@@ -33,6 +33,7 @@
         "react-icon-cloud": "^4.1.4",
         "react-markdown": "^9.0.1",
         "react-spring": "^9.7.3",
+        "recharts": "^2.12.7",
         "rehype-pretty-code": "^0.13.2",
         "rehype-stringify": "^10.0.0",
         "remark-parse": "^11.0.0",
