@@ -1,44 +1,86 @@
+import { BentoDemo } from "@/components/Bento";
+import { AnimatedShinyTextDemo } from "@/components/anime-text-shining";
+
 import { HackathonCard } from "@/components/hackathon-card";
+import AnimatedShinyText from "@/components/magicui/animated-shiny-text";
+import { BentoGrid } from "@/components/magicui/bento-grid";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
+import Globe from "@/components/magicui/globe";
+import IconCloud from "@/components/magicui/icon-cloud";
+import SparklesText from "@/components/magicui/sparkles-text";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
+
 import Link from "next/link";
 import Markdown from "react-markdown";
+import DotPattern from "@/components/DotPattern";
 
 const BLUR_FADE_DELAY = 0.04;
+
+const slugs = [
+  "typescript",
+  "javascript",
+  "dart",
+  "java",
+  "react",
+  "flutter",
+  "go",
+  "html5",
+  "css3",
+  "nuxtdotjs",
+  "nextdotjs",
+  "python",
+  "nodedotjs",
+  "mysql",
+  "vercel",
+  "docker",
+  "git",
+  "github",
+  "visualstudiocode",
+  "gitea",
+  "figma",
+];
+
+
 
 export default function Page() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
+      <div className="absolute inset-0 z-0">
+        <DotPattern />
+      </div>
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
             <div className="flex-col flex flex-1 space-y-1.5">
-              <BlurFadeText
-                delay={BLUR_FADE_DELAY}
-                className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
-                yOffset={8}
-                text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
-              />
-              <BlurFadeText
-                className="max-w-[600px] md:text-xl"
-                delay={BLUR_FADE_DELAY}
-                text={DATA.description}
-              />
+              <section id="bentogrid">
+            <SparklesText text={"Hello"}></SparklesText>
+              <BentoDemo/>
+              </section>
             </div>
-            <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-28 border">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
-                <AvatarFallback>{DATA.initials}</AvatarFallback>
-              </Avatar>
-            </BlurFade>
+          </div>
+        </div>
+        <section id="skills">
+        <div className="flex min-h-0 flex-col gap-y-3 py-8">
+          <BlurFade delay={BLUR_FADE_DELAY * 9}>
+            <h2 className="text-xl font-bold">Skills</h2>
+          </BlurFade>
+          <div className="flex flex-wrap gap-1">
+            {DATA.skills.map((skill, id) => (
+              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
+                <Badge key={skill}>{skill}</Badge>
+              </BlurFade>
+            ))}
           </div>
         </div>
       </section>
+      </section>
+      {/*
+       <AnimatedShinyTextDemo/>
       <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <h2 className="text-xl font-bold">About</h2>
@@ -48,7 +90,7 @@ export default function Page() {
             {DATA.summary}
           </Markdown>
         </BlurFade>
-      </section>
+      </section>*/}
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
@@ -97,20 +139,7 @@ export default function Page() {
           ))}
         </div>
       </section>
-      <section id="skills">
-        <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 9}>
-            <h2 className="text-xl font-bold">Skills</h2>
-          </BlurFade>
-          <div className="flex flex-wrap gap-1">
-            {DATA.skills.map((skill, id) => (
-              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge key={skill}>{skill}</Badge>
-              </BlurFade>
-            ))}
-          </div>
-        </div>
-      </section>
+     
       <section id="projects">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
@@ -152,6 +181,10 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <section id="globe">
+      <IconCloud  iconSlugs={slugs}></IconCloud>
+      </section>
+    {/*
       <section id="hackathons">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
@@ -195,6 +228,7 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
+    */}
       <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
