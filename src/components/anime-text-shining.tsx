@@ -13,8 +13,8 @@ export function AnimatedShinyTextDemo() {
         )}
       >
         <AnimatedShinyText className="text-xl inline-flex items-center justify-center px-6 py-1.5 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-          <span className="pr-2">✨ PaCode</span>
-          <AvatarCirclesDemo/>
+          <span className="pr-2">✨ PA Code</span>
+          <AvatarCirclesDemo />
         </AnimatedShinyText>
       </div>
     </div>
