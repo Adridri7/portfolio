@@ -18,6 +18,7 @@ import { FlipWords } from "@/components/animation/aceternity/FlipWord";
 import { WavyBackground } from "@/components/animation/aceternity/Wavy-background";
 
 import { AnimatedPinDemo } from "@/components/animation/aceternity/AnimatedPinDemo";
+import DarkModeFlow from "@/components/DarkmodeFlow";
 
 
 
@@ -244,6 +245,7 @@ export default function Page() {
                 Get in Touch
               </h2>
               <AnimatedPinDemo/>
+              
             </div>
           </BlurFade>
         </div>

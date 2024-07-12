@@ -1,3 +1,4 @@
+import { FileTreeDemo } from "@/components/FileTreeDemo";
 import BlurFade from "@/components/magicui/blur-fade";
 import { getBlogPosts } from "@/data/blog";
 import Link from "next/link";
@@ -16,8 +17,9 @@ export default async function BlogPage() {
     <section>
       <BlurFade delay={BLUR_FADE_DELAY}>
         <h1 className="font-medium text-2xl mb-8 tracking-tighter">blog</h1>
+        <FileTreeDemo/>
       </BlurFade>
-      {posts
+      {/*posts
         .sort((a, b) => {
           if (
             new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)
@@ -40,7 +42,7 @@ export default async function BlogPage() {
               </div>
             </Link>
           </BlurFade>
-        ))}
+        ))*/}
     </section>
   );
 }
