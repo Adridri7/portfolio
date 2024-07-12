@@ -1,8 +1,9 @@
 "use client"
 
-import { TrendingUp } from "lucide-react"
-import { PolarAngleAxis, PolarGrid, Radar, RadarChart } from "recharts"
 
+import { PolarAngleAxis, PolarGrid, Radar, RadarChart } from "recharts"
+import { useTheme } from "next-themes"
+import { useEffect, useState } from "react"
 import {
   Card,
   CardContent,
@@ -44,11 +45,25 @@ const chartConfig = {
 } satisfies ChartConfig
 
 export function ChartsDemo() {
+
+  const { theme, systemTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
+
+  const currentTheme = theme === 'system' ? systemTheme : theme
+  const bgColor = currentTheme === 'dark' ? 'bg-black' : 'bg-white'
+  const textColor = currentTheme === 'dark' ? 'text-white' : 'text-black'
   return (
-    <Card  className="w-full absolute right-10 w-[70%] bottom-13 origin-top translate-x-0  transition-all duration-300 ease-out group-hover:-translate-x-10 bg-black">
+    <Card className={`w-full absolute right-10 w-[70%] bottom-13 origin-top translate-x-0 transition-all duration-300 ease-out group-hover:-translate-x-10 ${bgColor} ${textColor}`}>
       <CardHeader className="items-center pb-4">
-      
-      
+     
       </CardHeader>
       <CardContent className="pb-0">
         <ChartContainer
@@ -74,7 +89,6 @@ export function ChartsDemo() {
           </RadarChart>
         </ChartContainer>
       </CardContent>
-    
     </Card>
   )
 }

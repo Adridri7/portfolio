@@ -1,9 +1,7 @@
 // src/components/BentoDemo.js
 import { CalendarIcon, FileTextIcon, InputIcon } from "@radix-ui/react-icons";
-import { Share2Icon, DatabaseZap, LineChart, SquareDashedMousePointer } from "lucide-react";
+import { Share2Icon, DatabaseZap, LineChart, SquareDashedMousePointer, FolderTree } from "lucide-react";
 
-import { cn } from "@/lib/utils";
-import { Calendar } from "@/components/ui/calendar";
 import {
   Command,
   CommandEmpty,
@@ -23,6 +21,9 @@ import ChartsDemo from "./chartsDemo";
 import ChartsDemo2 from "./chartsDemo2";
 
 import { FollowingPointerDemo } from "./animation/aceternity/FollowingPointerDemo";
+import { EvervaultCard } from "./animation/aceternity/EvervaultCard";
+import ToolTipCard from "./TooltipDemo";
+import { FileTreeDemo } from "./FileTreeDemo";
 
 const files = [
   {
@@ -60,8 +61,8 @@ interface Item {
 const features = [
   {
     Icon: SquareDashedMousePointer,
-    name: "Créativité",
-    description: "We automatically save your files as you type.",
+    name: "Frontend",
+    description: "UI personnalisable et unique",
     
     className: "col-span-3 lg:col-span-1",
     background: (
@@ -95,7 +96,7 @@ const features = [
   {
     Icon: DatabaseZap,
     name: "Backend",
-    description: "Supports 100+ integrations and counting.",
+    description: "Serveur, API et Architecture solide",
     href: "/",
     cta: "Learn more",
     className: "col-span-3 lg:col-span-2",
@@ -103,7 +104,16 @@ const features = [
       <AnimatedBeamDemo/>
     ),  
   },
-
+  {
+    Icon: FolderTree,
+    name: "Structure",
+    description: "Nous optimisons et structurons le code",
+    
+    className: "col-span-3 lg:col-span-1",
+    background: (
+     <FileTreeDemo/>
+    ),
+  },
   {
     Icon: CalendarIcon,
     name: "Pierre Skills",

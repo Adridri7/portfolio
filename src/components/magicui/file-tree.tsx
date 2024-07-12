@@ -213,7 +213,7 @@ type FolderProps = {
 
 const Folder = forwardRef<
   HTMLDivElement,
-  FolderProps & React.HTMLAttributes<HTMLDivElement>
+  FolderProps & React.HTMLAttributes<HTMLDivElement> & { iconColor?: string }
 >(
   (
     {
@@ -223,6 +223,7 @@ const Folder = forwardRef<
       isSelectable = true,
       isSelect,
       children,
+      iconColor,
       ...props
     },
     ref,
@@ -257,8 +258,8 @@ const Folder = forwardRef<
           onClick={() => handleExpand(value)}
         >
           {expandedItems?.includes(value)
-            ? openIcon ?? <FolderOpenIcon className="size-4" />
-            : closeIcon ?? <FolderIcon className="size-4" />}
+                ? openIcon ?? <FolderOpenIcon className={`size-4 ${iconColor}`} />
+                : closeIcon ?? <FolderIcon className={`size-4 ${iconColor}`} />}
           <span>{element}</span>
         </AccordionPrimitive.Trigger>
         <AccordionPrimitive.Content className="text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down relative overflow-hidden h-full">
@@ -290,6 +291,7 @@ const File = forwardRef<
     handleSelect?: (id: string) => void;
     isSelectable?: boolean;
     isSelect?: boolean;
+    iconColor?: string;
     fileIcon?: React.ReactNode;
   } & React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
 >(
@@ -301,6 +303,7 @@ const File = forwardRef<
       isSelectable = true,
       isSelect,
       fileIcon,
+      iconColor,
       children,
       ...props
     },
@@ -326,7 +329,7 @@ const File = forwardRef<
           )}
           onClick={() => selectItem(value)}
         >
-          {fileIcon ?? <FileIcon className="size-4" />}
+          {fileIcon ?? <FileIcon className={`size-4 ${iconColor}`} />}
           {children}
         </AccordionPrimitive.Trigger>
       </AccordionPrimitive.Item>
