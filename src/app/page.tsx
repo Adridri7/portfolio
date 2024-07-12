@@ -19,6 +19,7 @@ import { WavyBackground } from "@/components/animation/aceternity/Wavy-backgroun
 
 import { AnimatedPinDemo } from "@/components/animation/aceternity/AnimatedPinDemo";
 import DarkModeFlow from "@/components/DarkmodeFlow";
+import SignupFormDemo from "@/components/SignUpForm";
 
 
 
@@ -244,8 +245,7 @@ export default function Page() {
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                 Get in Touch
               </h2>
-              <AnimatedPinDemo/>
-              
+             <SignupFormDemo/>
             </div>
           </BlurFade>
         </div>

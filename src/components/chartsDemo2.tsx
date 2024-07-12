@@ -21,17 +21,17 @@ import {
 const chartData = [
   { month: "typescript", desktop: 300 },
   { month: "javascript", desktop: 300 },
-  { month: "react", desktop: 300 },
-  { month: "go", desktop: 500 },
+  { month: "react", desktop: 400 },
+  { month: "go", desktop: 600 },
   { month: "html5", desktop: 300 },
   { month: "css3", desktop: 300 },
-  { month: "nuxtdotjs", desktop: 400 },
+  { month: "nuxtdotjs", desktop: 300 },
   { month: "nextdotjs", desktop: 300 },
-  { month: "python", desktop: 400 },
+  { month: "python", desktop: 300 },
   { month: "nodedotjs", desktop: 300 },
   { month: "mysql", desktop: 500 },
-  { month: "vercel", desktop: 300 },
-  { month: "docker", desktop: 400 },
+  { month: "vercel", desktop: 200 },
+  { month: "docker", desktop: 500 },
   { month: "git", desktop: 500 },
 
 

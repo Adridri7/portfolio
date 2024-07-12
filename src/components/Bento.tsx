@@ -120,7 +120,7 @@ const features = [
     description: "Use the calendar to filter your files by date.",
     className: "col-span-3 lg:col-span-3",
     href: "/",
-    cta: "Learn more",
+    cta: "Pierre profil",
     background: (
       <ChartsDemo  />
     ),
@@ -131,7 +131,7 @@ const features = [
     description: "Use the calendar to filter your files by date.",
     className: "col-span-3 lg:col-span-3",
     href: "/",
-    cta: "Learn more",
+    cta: "Adrien profil",
     background: (
       <ChartsDemo2 />
     ),

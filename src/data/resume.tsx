@@ -37,9 +37,7 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
     { href: "#", icon: CodeIcon, label: "Projects" },
-    { href: "#", icon: PencilLine, label: "Notes" },
   ],
   contact: {
     email: "hello@example.com",
@@ -232,22 +230,17 @@ export const DATA = {
       video: "https://cdn.magicui.design/bento-grid.mp4",
     },
     {
-      title: "llm.report",
-      href: "https://llm.report",
-      dates: "April 2023 - September 2023",
+      title: "Net cat",
+      href: "https://github.com/pcaboor/net-cat",
+      dates: "Juin 2024 - Juillet 2024",
       active: true,
       description:
         "Developed an open-source logging and analytics platform for OpenAI: Log your ChatGPT API requests, analyze costs, and improve your prompts.",
       technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI",
-        "Stripe",
-        "Cloudflare Workers",
+        "Go",
+        "TCP",
+        "IP",
+        "Serveur",
       ],
       links: [
         {
@@ -261,8 +254,8 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
-      video: "https://cdn.llm.report/openai-demo.mp4",
+      image: "https://cdn.discordapp.com/attachments/1211621892868280341/1261414064349773854/Capture_decran_2024-07-12_a_22.07.01.png?ex=6692dee4&is=66918d64&hm=6e99971b29d9abc8127c9afc7fcbf2def211c6dd0a01092ddb912dc653d6d0d5&",
+      video: "",
     },
     {
       title: "Automatic Chat",
