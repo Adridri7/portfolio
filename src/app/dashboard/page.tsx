@@ -94,13 +94,6 @@ function Dashboard() {
                 href="#"
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
               >
-                <Car className="h-4 w-4" />
-                Garage
-              </Link>
-              <Link
-                href="#"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
-              >
                 <LineChart className="h-4 w-4" />
                 Analytiques
               </Link>
@@ -166,13 +159,6 @@ function Dashboard() {
                 >
                   <Mail className="h-5 w-5" />
                   Messagerie
-                </Link>
-                <Link
-                  href="#"
-                  className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
-                >
-                  <Car className="h-5 w-5" />
-                  Garage
                 </Link>
                 <Link
                   href="#"
