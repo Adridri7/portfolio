@@ -12,7 +12,7 @@ import { UsersRound, Rocket, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
 import AnimatedGradientText from "@/components/magicui/animated-gradient-text";
 import { Label } from "@/components/ui/label"
-import SparklesText from "@/components/magicui/sparkles-text";
+import SparklesText from "@/components/magicui/sparkles-text-1";
 import BoxReveal from "@/components/magicui/box-reveal";
 import {
     Tabs,
