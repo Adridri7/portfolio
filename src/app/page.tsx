@@ -17,8 +17,6 @@ import { FlipWords } from "@/components/animation/aceternity/FlipWord";
 
 import { WavyBackground } from "@/components/animation/aceternity/Wavy-background";
 
-import { AnimatedPinDemo } from "@/components/animation/aceternity/AnimatedPinDemo";
-import DarkModeFlow from "@/components/DarkmodeFlow";
 import SignupFormDemo from "@/components/SignUpForm";
 
 
@@ -56,8 +54,8 @@ export default function Page() {
     <main className="flex flex-col min-h-[100dvh]">
       <div className="absolute inset-0 z-0">
         <DotPattern />
-        <WavyBackground/>
-       
+        <WavyBackground />
+
       </div>
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl">
@@ -74,14 +72,14 @@ export default function Page() {
                               <AnimatedShinyTextDemo />
                             </div>
                             <div className=" flex justify-center items-center px-4">
-                            <div className="text-4xl mx-auto font-semibold dark:text-neutral-400">
-                             Développeurs FullStacks spécialisés
-                              <FlipWords words={words} /> <br />
+                              <div className="text-4xl mx-auto font-semibold dark:text-neutral-400">
+                                Développeurs FullStacks spécialisés
+                                <FlipWords words={words} /> <br />
+                              </div>
                             </div>
                           </div>
-                          </div>
                           <BentoDemo />
-                         
+
                         </div>
                       </BlurFade>
                     </div>
@@ -89,9 +87,7 @@ export default function Page() {
                       Voici nos derniers projets
                     </h2>
                     <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed pb-4">
-                      I&apos;ve worked on a variety of projects, from simple
-                      websites to complex web applications. Here are a few of my
-                      favorites.
+                      Nous avons travaillé sur divers projets aussi bien scolaires que professionnels. En passant des algorithmes fondamentaux aux applications web très poussées.  
                     </p>
                     <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
 
@@ -121,7 +117,7 @@ export default function Page() {
           </div>
         </div>
         <section id="skills">
-          <div className="flex min-h-0 flex-col gap-y-3 py-8">
+          <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12 flex min-h-0 flex-col gap-y-3 py-8">
             <BlurFade delay={BLUR_FADE_DELAY * 9}>
               <SparklesText text={"Skills"} className="text-3xl"></SparklesText>
             </BlurFade>
@@ -132,16 +128,16 @@ export default function Page() {
 
                 </BlurFade>
               ))}
-              <div className="item-center flex"> 
-              <IconCloud iconSlugs={slugs}></IconCloud>
+              <div className="item-center flex">
+                <IconCloud iconSlugs={slugs}></IconCloud>
               </div>
-            
+
             </div>
           </div>
         </section>
       </section>
-    
-        {/*
+
+      {/*
           <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
@@ -239,13 +235,13 @@ export default function Page() {
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <div className="space-y-3">
-              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                Contact
+              {/*inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm*/}
+              <div className="  ">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Contact
+                </h2>
               </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                Get in Touch
-              </h2>
-             <SignupFormDemo/>
+              <SignupFormDemo />
             </div>
           </BlurFade>
         </div>

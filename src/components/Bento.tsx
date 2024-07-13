@@ -1,6 +1,6 @@
 // src/components/BentoDemo.js
 import { CalendarIcon, FileTextIcon, InputIcon } from "@radix-ui/react-icons";
-import { Share2Icon, DatabaseZap, LineChart, SquareDashedMousePointer, FolderTree } from "lucide-react";
+import { Share2Icon, DatabaseZap, LineChart, SquareDashedMousePointer, FolderTree, Wallpaper, Database } from "lucide-react";
 
 import {
   Command,
@@ -24,6 +24,7 @@ import { FollowingPointerDemo } from "./animation/aceternity/FollowingPointerDem
 import { EvervaultCard } from "./animation/aceternity/EvervaultCard";
 import ToolTipCard from "./TooltipDemo";
 import { FileTreeDemo } from "./FileTreeDemo";
+import { DataTextureLoader } from "three/src/Three.js";
 
 const files = [
   {
@@ -115,9 +116,9 @@ const features = [
     ),
   },
   {
-    Icon: CalendarIcon,
-    name: "Pierre Skills",
-    description: "Use the calendar to filter your files by date.",
+    Icon: Wallpaper,
+    name: "Compétences de Pierre",
+    description: "Des compétences plutôt orientées FrontEnd.",
     className: "col-span-3 lg:col-span-3",
     href: "/",
     cta: "Pierre profil",
@@ -126,9 +127,9 @@ const features = [
     ),
   },
   {
-    Icon: CalendarIcon,
-    name: "Adrien Skills",
-    description: "Use the calendar to filter your files by date.",
+    Icon: Database,
+    name: "Compétences d'Adrien",
+    description: "Des compétences plutôt orientées BackEnd.",
     className: "col-span-3 lg:col-span-3",
     href: "/",
     cta: "Adrien profil",
