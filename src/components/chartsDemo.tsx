@@ -35,7 +35,7 @@ const chartData = [
   { month: "vercel", desktop: 300 },
   { month: "docker", desktop: 400 },
   { month: "git", desktop: 500 },
-  //   { month: "security", desktop: 500 },
+  //   { month: "git", desktop: 500 },
 
 
 ]
@@ -70,7 +70,7 @@ export function ChartsDemo() {
         <CardContent className="pb-0">
           <ChartContainer
             config={chartConfig}
-            className="mx-auto aspect-square max-h-[250px] w-auto"
+            className="mx-auto aspect-square max-h-[250px] w-full"
           >
             <RadarChart data={chartData}>
               <ChartTooltip

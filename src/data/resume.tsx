@@ -232,7 +232,7 @@ export const DATA = {
       dates: "Juin 2024 - Juillet 2024",
       active: true,
       description:
-        "Ce projet consiste à recréer NetCat dans une architecture serveur-client qui peut s'exécuter en mode serveur sur un port spécifié en écoutant les connexions entrantes, et il peut être utilisé en mode client, en essayant de se connecter à un port spécifié et en transmettant des informations au serveur.",
+        "Ce projet consiste à recréer NetCat dans une architecture client-serveur. Il peut s'exécuter en mode serveur sur un port spécifié, en écoutant les connexions entrantes, ou en mode client, en se connectant à un port spécifié et en transmettant des informations au serveur.",
       technologies: [
         "Golang",
         "TCP / UDP",
