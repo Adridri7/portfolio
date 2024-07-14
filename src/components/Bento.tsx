@@ -1,6 +1,6 @@
 // src/components/BentoDemo.js
 import { CalendarIcon, FileTextIcon, InputIcon } from "@radix-ui/react-icons";
-import { Share2Icon, DatabaseZap, LineChart, SquareDashedMousePointer, FolderTree, Wallpaper, Database } from "lucide-react";
+import { Share2Icon, DatabaseZap, LineChart, SquareDashedMousePointer, FolderTree, Wallpaper, Database, GlobeLockIcon,  FileText, Lock, Shield, FileLock, AlertTriangle, Key } from "lucide-react";
 
 import {
   Command,
@@ -71,9 +71,9 @@ const features = [
     ),
   },
   {
-    Icon: InputIcon,
-    name: "Full text search",
-    description: "Search through all your files in one place.",
+    Icon: GlobeLockIcon,
+    name: "Securité",
+    description: "Hashage, encryptage, backup, firewall...",
     href: "/",
     cta: "Learn more",
     className: "col-span-3 lg:col-span-2",
@@ -83,12 +83,30 @@ const features = [
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup heading="Suggestions">
-            <CommandItem>screenshot.png</CommandItem>
-            <CommandItem>bitcoin.pdf</CommandItem>
-            <CommandItem>finances.xlsx</CommandItem>
-            <CommandItem>logo.svg</CommandItem>
-            <CommandItem>keys.gpg</CommandItem>
-            <CommandItem>seed.txt</CommandItem>
+            <CommandItem>
+              <Shield className="mr-2" />
+              firewall_rules.config
+            </CommandItem>
+            <CommandItem>
+              <Lock className="mr-2" />
+              passwords_encrypted.txt
+            </CommandItem>
+            <CommandItem>
+              <FileText className="mr-2" />
+              network_scan_report.pdf
+            </CommandItem>
+            <CommandItem>
+              <FileLock className="mr-2" />
+              security_policy.docx
+            </CommandItem>
+            <CommandItem>
+              <AlertTriangle className="mr-2" />
+              vulnerability_assessment.xlsx
+            </CommandItem>
+            <CommandItem>
+              <Key className="mr-2" />
+              backup_keys.gpg
+            </CommandItem>
           </CommandGroup>
         </CommandList>
       </Command>
@@ -118,7 +136,7 @@ const features = [
   {
     Icon: Wallpaper,
     name: "Compétences de Pierre",
-    description: "Des compétences plutôt orientées FrontEnd.",
+    description: "Compétences orientées FrontEnd.",
     className: "col-span-3 lg:col-span-3",
     href: "/",
     cta: "Pierre profil",
@@ -129,7 +147,7 @@ const features = [
   {
     Icon: Database,
     name: "Compétences d'Adrien",
-    description: "Des compétences plutôt orientées BackEnd.",
+    description: "Compétences orientées BackEnd.",
     className: "col-span-3 lg:col-span-3",
     href: "/",
     cta: "Adrien profil",

@@ -22,20 +22,20 @@ import {
 const chartData = [
   { month: "typescript", desktop: 300 },
   { month: "javascript", desktop: 300 },
-  { month: "dart", desktop: 300 },
   { month: "react", desktop: 500 },
   { month: "flutter", desktop: 300 },
   { month: "go", desktop: 300 },
   { month: "html5", desktop: 400  },
   { month: "css3", desktop: 500 },
-  { month: "nuxtdotjs", desktop: 500 },
-  { month: "nextdotjs", desktop: 300 },
+  { month: "nuxtjs", desktop: 500 },
+  { month: "nextjs", desktop: 300 },
   { month: "python", desktop: 300 },
-  { month: "nodedotjs", desktop: 300 },
+  { month: "nodejs", desktop: 300 },
   { month: "mysql", desktop: 300 },
   { month: "vercel", desktop: 300 },
   { month: "docker", desktop: 400 },
   { month: "git", desktop: 500 },
+  //   { month: "security", desktop: 500 },
 
 
 ]

@@ -37,7 +37,7 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "#", icon: CodeIcon, label: "Projects" },
+   // { href: "#", icon: CodeIcon, label: "Projects" },
   ],
   contact: {
     email: "hello@example.com",
@@ -205,7 +205,7 @@ export const DATA = {
       dates: "Juin 2024",
       active: true,
       description:
-        "Groupie Trackers consiste à recevoir une API donnée et à manipuler les données qu'elle contient, afin de créer un site affichant les informations. Cartographie des différents lieux de concerts d'un certain artiste/groupe donnés par le Client.",
+        "Groupie Trackers consiste à recevoir une API donnée et à manipuler les données qu'elle contient pour créer un site affichant ces informations. Ce projet inclut la cartographie des différents lieux de concerts d'un artiste ou groupe spécifié par le client.",
       technologies: [
         "Golang",
         "JSON",
@@ -251,28 +251,24 @@ export const DATA = {
       video: "",
     },
     {
-      title: "Automatic Chat",
-      href: "https://automatic.chat",
-      dates: "April 2023 - March 2024",
+      title: "Push Swap",
+      href: "https://github.com/pcaboor/push-swap",
+      dates: "Juin 2024",
       active: true,
       description:
-        "Developed an AI Customer Support Chatbot which automatically responds to customer support tickets using the latest GPT models.",
+        "Push-Swap est un projet très simple qui utilise un algorithme de tri non comparatif. Vous avez à votre disposition une liste de valeurs entières, deux piles (a et b) et un ensemble d'instructions. Push-swap, qui calcule et affiche sur la sortie standard le plus petit programme utilisant le langage d'instructions push-swap pour trier les arguments entiers reçus. Checker, qui prend des arguments entiers et lit les instructions sur l'entrée standard. Une fois lues, checker les exécute et affiche OK si les entiers sont triés. Sinon, il affichera KO.",
       technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI",
-        "Stripe",
-        "Cloudflare Workers",
+        "Golang",
+        "Bash",
+        "Git",
       ],
       links: [
         {
-          type: "Website",
-          href: "https://automatic.chat",
-          icon: <Icons.globe className="size-3" />,
+          type: "Source",
+          icon: <Icons.github className="h-4 w-4" />,
+          href: "https://github.com/pcaboor/push-swap",
+
+         
         },
       ],
       image: "",

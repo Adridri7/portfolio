@@ -102,7 +102,7 @@ function Dashboard() {
           <div className="mt-auto p-4">
             <Card x-chunk="dashboard-02-chunk-0">
               <CardHeader className="p-2 pt-0 md:p-4">
-                <CardTitle><AnimatedShinyTextDemo /></CardTitle>
+                <CardTitle>Upgrade to Pro ✨</CardTitle>
                 <CardDescription>
                   Unlock all features and get unlimited access to our support
                   team.
@@ -171,7 +171,7 @@ function Dashboard() {
               <div className="mt-auto">
                 <Card>
                   <CardHeader>
-                    <CardTitle><AnimatedShinyTextDemo /></CardTitle>
+                    <CardTitle>Upgrade to Pro ✨</CardTitle>
                     <CardDescription>
                       Unlock all features and get unlimited access to our
                       support team.
