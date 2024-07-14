@@ -1,6 +1,6 @@
 // src/components/BentoDemo.js
 import { CalendarIcon, FileTextIcon, InputIcon } from "@radix-ui/react-icons";
-import { Share2Icon, DatabaseZap, LineChart, SquareDashedMousePointer, FolderTree, Wallpaper, Database, GlobeLockIcon,  FileText, Lock, Shield, FileLock, AlertTriangle, Key } from "lucide-react";
+import { Share2Icon, DatabaseZap, LineChart, SquareDashedMousePointer, FolderTree, Wallpaper, Database, GlobeLockIcon, FileText, Lock, Shield, FileLock, AlertTriangle, Key } from "lucide-react";
 
 import {
   Command,
@@ -11,9 +11,7 @@ import {
   CommandList,
 } from "@/components/ui/command";
 
-
 import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
-
 
 import { AnimatedBeamDemo } from "./bi-directional";
 
@@ -57,25 +55,22 @@ interface Item {
   time: string;
 }
 
-
-
 const features = [
   {
     Icon: SquareDashedMousePointer,
     name: "Frontend",
     description: "UI personnalisable et unique",
-    
     className: "col-span-3 lg:col-span-1",
-    background: (
-      <FollowingPointerDemo/>
-    ),
+    background: <FollowingPointerDemo />,
+    href: "#", // Default value
+    cta: "", // Default value
   },
   {
     Icon: GlobeLockIcon,
     name: "Securité",
     description: "Hashage, encryptage, backup, firewall...",
     href: "/",
-    cta: "Learn more",
+    cta: "",
     className: "col-span-3 lg:col-span-2",
     background: (
       <Command className="absolute right-10 top-10 w-[70%] origin-top translate-x-0 border transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] group-hover:-translate-x-10">
@@ -119,41 +114,34 @@ const features = [
     href: "/",
     cta: "Learn more",
     className: "col-span-3 lg:col-span-2",
-    background: (
-      <AnimatedBeamDemo/>
-    ),  
+    background: <AnimatedBeamDemo />,
   },
   {
     Icon: FolderTree,
     name: "Structure",
     description: "Nous optimisons et structurons le code",
-    
     className: "col-span-3 lg:col-span-1",
-    background: (
-     <FileTreeDemo/>
-    ),
+    background: <FileTreeDemo />,
+    href: "#", // Default value
+    cta: "", // Default value
   },
   {
     Icon: Wallpaper,
     name: "Compétences de Pierre",
     description: "Compétences orientées FrontEnd.",
     className: "col-span-3 lg:col-span-3",
-    href: "/",
-    cta: "Pierre profil",
-    background: (
-      <ChartsDemo  />
-    ),
+    href: "https://github.com/pcaboor",
+    cta: "Profil Github",
+    background: <ChartsDemo />,
   },
   {
     Icon: Database,
     name: "Compétences d'Adrien",
     description: "Compétences orientées BackEnd.",
     className: "col-span-3 lg:col-span-3",
-    href: "/",
-    cta: "Adrien profil",
-    background: (
-      <ChartsDemo2 />
-    ),
+    href: "https://github.com/Adridri7",
+    cta: "Profil Github",
+    background: <ChartsDemo2 />,
   },
 ];
 
