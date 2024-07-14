@@ -4,6 +4,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea"
 
+
 import { cn } from "@/lib/utils";
 import {
   IconBrandGithub,
@@ -28,34 +29,45 @@ export function SignupFormDemo() {
       <form className="my-8" onSubmit={handleSubmit}>
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
-            <Label htmlFor="lastname">Nom</Label>
-            <Input id="lastname" placeholder="Durden" type="text" />
+            <Label htmlFor="lastname">Pierre Caboor</Label>
+            <a href="https://www.malt.fr/profile/pierrecaboor?q=developpeur+fullstack+frontend&p=2&sourceComponent=search_block_freelancer_dashboard&searchid=66943ba1781c213a80677687" target="_blank" rel="noopener noreferrer">
+              <button
+                className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 text-sm font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+                type="button"
+              >
+                Profil Malt
+                <BottomGradient />
+              </button>
+            </a>
           </LabelInputContainer>
+     
           <LabelInputContainer>
-            <Label htmlFor="firstname">Prénom</Label>
-            <Input id="firstname" placeholder="Tyler" type="text" />
+            <Label htmlFor="firstname">Adrien Rocchetti</Label>
+            <a href="https://www.malt.fr/profile/adrienrocchetti?q=Adrien+Rocchetti&sourceComponent=search_block_freelancer_dashboard&searchid=66942e3b4e9fc028a825738c" target="_blank" rel="noopener noreferrer">
+              <button
+                className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 text-sm font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+                type="button"
+              >
+                Profil Malt
+                <BottomGradient />
+              </button>
+            </a>
           </LabelInputContainer>
         </div>
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="email">Adresse Email</Label>
-          <Input id="email" placeholder="tylerdurden@example.com" type="email" />
+        <LabelInputContainer className="mb-4 py-2">
+          <Label htmlFor="email">pa.devcode@gmail.com</Label>
+          
         </LabelInputContainer>
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="password">Objet</Label>
-          <Input id="password" placeholder="" type="text" />
+        <LabelInputContainer className="mb-4 py-2">
+          <Label htmlFor="password">+33 7 86 33 13 81</Label>
+          ou
+          <Label htmlFor="password">+33 7 67 73 85 95</Label>
+          <br></br>
+          
+          <Input className="item-center flex mb-4" id="password" placeholder="Réponse moyenne en 20 mins" type="text" disabled/>
         </LabelInputContainer>
-        <Label htmlFor="message">Message</Label>
-        <LabelInputContainer className="mb-8">
-          <Textarea placeholder="Type your message here." id="message" />
-        </LabelInputContainer>
+        
 
-        <button
-          className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
-          type="submit"
-        >
-          Envoyer &rarr;
-          <BottomGradient />
-        </button>
 
       </form>
     </div>

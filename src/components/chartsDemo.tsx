@@ -63,7 +63,7 @@ export function ChartsDemo() {
   const bgColor = currentTheme === 'dark' ? 'bg-black' : 'bg-white'
   const textColor = currentTheme === 'dark' ? 'text-white' : 'text-black'
   return (
-      <Card className={`w-full absolute right-10 w-[70%] bottom-13 origin-top translate-x-0 transition-all duration-300 ease-out group-hover:-translate-x-10 ${bgColor} ${textColor}`}>
+      <Card className={`w-full absolute right-10 w-[70%] bottom-13 border-0 origin-top translate-x-0 transition-all duration-300 ease-out group-hover:-translate-x-10 ${bgColor} ${textColor}`}>
         <CardHeader className="items-center pb-4">
        
         </CardHeader>
