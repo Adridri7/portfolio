@@ -175,7 +175,7 @@ export const DATA = {
       dates: "Juillet 2024",
       active: true,
       description:
-        "Nous réalisons des SaaS personalisable sNous concevons et développons des solutions SaaS en Next.js et Go pour nos clients, en répondant précisément à leurs attentes et en offrant des options de personnalisation complètes, de A à Z. Voici une courte Démo de ce que nous pouvons proposer.",
+        "Nous concevons et développons des solutions SaaS en Next.js et Go pour nos clients, en répondant précisément à leurs attentes et en offrant des options de personnalisation complètes, de A à Z. Voici une courte Démo de ce que nous pouvons proposer.",
       technologies: [
         "Next.js",
         "Typescript",
