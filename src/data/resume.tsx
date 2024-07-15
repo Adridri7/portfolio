@@ -223,7 +223,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "https://cdn.discordapp.com/attachments/1211621892868280341/1261669409941094410/Capturevidodu13-07-2024144818-ezgif.com-video-to-gif-converter.gif?ex=6693ccb4&is=66927b34&hm=7c234fec239c4e5b919b294f55d276b8d51707f8074c726622c405b462e64222&",
+      image: "https://github.com/Adridri7/portfolio/blob/main/images/groupie.gif?raw=true",
       video: "",
     },
     {
@@ -247,7 +247,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "https://cdn.discordapp.com/attachments/1211621892868280341/1261414064349773854/Capture_decran_2024-07-12_a_22.07.01.png?ex=6692dee4&is=66918d64&hm=6e99971b29d9abc8127c9afc7fcbf2def211c6dd0a01092ddb912dc653d6d0d5&",
+      image: "https://github.com/Adridri7/portfolio/blob/main/images/nc.png?raw=true",
       video: "",
     },
     {
