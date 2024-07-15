@@ -175,7 +175,7 @@ export const DATA = {
       dates: "Juillet 2024",
       active: true,
       description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis quibusdam voluptatum, quidem adipisci dolor excepturi ad, nostrum neque vel quia a. Ipsam fuga recusandae sunt officia ab illo excepturi. Pariatur.",
+        "Nous réalisons des SaaS personalisable sNous concevons et développons des solutions SaaS en Next.js et Go pour nos clients, en répondant précisément à leurs attentes et en offrant des options de personnalisation complètes, de A à Z. Voici une courte Démo de ce que nous pouvons proposer.",
       technologies: [
         "Next.js",
         "Typescript",
