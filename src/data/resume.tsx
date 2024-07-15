@@ -195,7 +195,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "https://github.com/Adridri7/portfolio/blob/main/images/saas.gif?raw=true",
+      image: "https://i.postimg.cc/3R8bnHGv/saas.gif",
       video:
         "",
     },
@@ -223,7 +223,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "https://github.com/Adridri7/portfolio/blob/main/images/groupie.gif?raw=true",
+      image: "https://i.postimg.cc/mZ8hd3vz/groupie.gif",
       video: "",
     },
     {
@@ -247,7 +247,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "https://github.com/Adridri7/portfolio/blob/main/images/nc.png?raw=true",
+      image: "https://i.postimg.cc/TwM4mDdC/nc.png",
       video: "",
     },
     {
@@ -271,9 +271,9 @@ export const DATA = {
          
         },
       ],
-      image: "",
+      image: "https://i.postimg.cc/vZ1z8Zrh/images.png",
       video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
+        "",
     },
   ],
   hackathons: [
