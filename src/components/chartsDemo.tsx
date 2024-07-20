@@ -1,16 +1,12 @@
 "use client"
 
-
 import { PolarAngleAxis, PolarGrid, Radar, RadarChart } from "recharts"
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card"
 import {
   ChartConfig,
@@ -35,9 +31,6 @@ const chartData = [
   { month: "vercel", desktop: 300 },
   { month: "docker", desktop: 400 },
   { month: "git", desktop: 500 },
-  //   { month: "git", desktop: 500 },
-
-
 ]
 
 const chartConfig = {
@@ -63,36 +56,35 @@ export function ChartsDemo() {
   const bgColor = currentTheme === 'dark' ? 'bg-transparent' : 'bg-transparent'
   const textColor = currentTheme === 'dark' ? 'text-white' : 'text-black'
   return (
-      <Card className={`w-full absolute right-10 w-[70%] bottom-13 border-0 border-transparent origin-top translate-x-0 transition-all duration-300 ease-out group-hover:-translate-x-10 ${bgColor} ${textColor}`}>
-        <CardHeader className="items-center pb-4">
-       
-        </CardHeader>
-        <CardContent className="pb-0">
-          <ChartContainer
-            config={chartConfig}
-            className="mx-auto aspect-square max-h-[250px] w-full"
-          >
-            <RadarChart data={chartData}>
-              <ChartTooltip
-                cursor={false}
-                content={<ChartTooltipContent hideLabel />}
-              />
-              <PolarGrid gridType="circle" />
-              <PolarAngleAxis dataKey="month" />
-              <Radar
-                dataKey="desktop"
-                fill="var(--color-desktop)"
-                fillOpacity={0.6}
-                dot={{
-                  r: 4,
-                  fillOpacity: 1,
-                }}
-              />
-            </RadarChart>
-          </ChartContainer>
-        </CardContent>
-      </Card>
-    )
-  }
-  
-  export default ChartsDemo
+    <Card className={`w-full absolute right-10 w-[70%] bottom-13 border-0 border-transparent origin-top translate-x-0 transition-all duration-300 ease-out group-hover:-translate-x-10 ${bgColor} ${textColor}`} style={{ boxShadow: '0 0 0 0 transparent' }}>
+      <CardHeader className="items-center pb-4">
+      </CardHeader>
+      <CardContent className="pb-0">
+        <ChartContainer
+          config={chartConfig}
+          className="mx-auto aspect-square max-h-[250px] w-full"
+        >
+          <RadarChart data={chartData}>
+            <ChartTooltip
+              cursor={false}
+              content={<ChartTooltipContent hideLabel />}
+            />
+            <PolarGrid gridType="circle" />
+            <PolarAngleAxis dataKey="month" />
+            <Radar
+              dataKey="desktop"
+              fill="var(--color-desktop)"
+              fillOpacity={0.6}
+              dot={{
+                r: 4,
+                fillOpacity: 1,
+              }}
+            />
+          </RadarChart>
+        </ChartContainer>
+      </CardContent>
+    </Card>
+  )
+}
+
+export default ChartsDemo
