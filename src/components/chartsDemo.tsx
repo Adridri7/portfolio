@@ -60,7 +60,7 @@ export function ChartsDemo() {
   }
 
   const currentTheme = theme === 'system' ? systemTheme : theme
-  const bgColor = currentTheme === 'dark' ? 'bg-black' : 'bg-white'
+  const bgColor = currentTheme === 'dark' ? 'bg-transparent' : 'bg-transparent'
   const textColor = currentTheme === 'dark' ? 'text-white' : 'text-black'
   return (
       <Card className={`w-full absolute right-10 w-[70%] bottom-13 border-0 origin-top translate-x-0 transition-all duration-300 ease-out group-hover:-translate-x-10 ${bgColor} ${textColor}`}>

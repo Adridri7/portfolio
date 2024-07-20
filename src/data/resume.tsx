@@ -4,7 +4,7 @@ import { CodeIcon, HomeIcon, NotebookIcon, PencilLine } from "lucide-react";
 export const DATA = {
   name: "PA Code",
   initials: "PA",
-  url: "",
+  url: "https://github.com/pcaboor",
   location: "France",
   locationLink: "https://www.google.com/maps/place/rouen",
   description:

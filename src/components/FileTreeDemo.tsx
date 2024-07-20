@@ -3,9 +3,9 @@ import { File, Folder, Tree } from "@/components/magicui/file-tree";
 export function FileTreeDemo() {
   return (
  
-    <div className="absolute flex flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-105">
+    <div className="absolute flex flex-col items-center justify-center overflow-hidden rounded-lg md:shadow-xl [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-105">
       <Tree
-        className="p-2 overflow-hidden rounded-md bg-background"
+        className="p-2 overflow-hidden rounded-md bg-transparent"
         initialSelectedId="7"
         initialExpandedItems={[
           "1",
