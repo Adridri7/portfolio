@@ -4,13 +4,13 @@ import { CodeIcon, HomeIcon, NotebookIcon, PencilLine } from "lucide-react";
 export const DATA = {
   name: "PA Code",
   initials: "PA",
-  url: "https://dillion.io",
+  url: "",
   location: "France",
-  locationLink: "https://www.google.com/maps/place/sanfrancisco",
+  locationLink: "https://www.google.com/maps/place/rouen",
   description:
-    "Software Engineer turned Entrepreneur. I love building things and helping people. Very active on Twitter.",
+    "Equipe de 2 développeurs Fullstack en freelance sépcialisés Back-end & Front-end dans les applications web comme les SaaS.",
   summary:
-    "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
+    "",
   avatarUrl: "/me.png",
   skills: [
     "TypeScript",
@@ -251,16 +251,14 @@ export const DATA = {
       video: "",
     },
     {
-      title: "Forum",
+      title: "Lem-In",
       href: "",
       dates: "Juillet 2024",
       active: true,
       description:
-        "En cours de développement...",
+        "",
       technologies: [
         "Golang",
-        "Bash",
-        "Git",
       ],
       links: [
         {
