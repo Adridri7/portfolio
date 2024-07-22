@@ -74,7 +74,7 @@ export default function Page() {
                             <div className=" flex justify-center items-center px-4">
                               <div className="text-4xl mx-auto font-semibold dark:text-neutral-400">
                                 Développeurs FullStacks spécialisés
-                                <FlipWords words={words} /> 
+                                <FlipWords words={words} />
                               </div>
                             </div>
                           </div>
@@ -83,11 +83,34 @@ export default function Page() {
                         </div>
                       </BlurFade>
                     </div>
+
+                    <div className="grid items-center justify-center gap-4 px-4 p-4 text-center md:px-6 w-full py-12 flex min-h-0 flex-col  py-8 max-w-[800px] mx-auto">
+                      <BlurFade delay={BLUR_FADE_DELAY * 9}>
+                        <SparklesText text={"Skills"} className="text-3xl"></SparklesText>
+                      </BlurFade>
+                      <div className="flex flex-wrap gap-1">
+                        {DATA.skills.map((skill, id) => (
+                          <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
+                            <Badge key={skill}>{skill}</Badge>
+
+                          </BlurFade>
+                        ))}
+
+
+                      </div>
+                    </div>
+
+                    <div className="item-center flex p-4">
+                      <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
+                        <IconCloud iconSlugs={slugs}></IconCloud>
+                      </div>
+                    </div>
+
                     <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl pt-4">
                       Voici nos derniers projets
                     </h2>
                     <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed pb-4">
-                    Nous avons travaillé sur divers projets, aussi bien scolaires que professionnels, allant des algorithmes fondamentaux aux applications web très avancées.  
+                      Nous avons travaillé sur divers projets, aussi bien scolaires que professionnels, allant des algorithmes fondamentaux aux applications web très avancées.
                     </p>
                     <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
 
@@ -116,29 +139,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <section id="skills">
-          <div className="grid items-center justify-center gap-4 px-4 p-4 text-center md:px-6 w-full py-12 flex min-h-0 flex-col  py-8 max-w-[800px] mx-auto">
-            <BlurFade delay={BLUR_FADE_DELAY * 9}>
-              <SparklesText text={"Skills"} className="text-3xl"></SparklesText>
-            </BlurFade>
-            <div className="flex flex-wrap gap-1">
-              {DATA.skills.map((skill, id) => (
-                <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                  <Badge key={skill}>{skill}</Badge>
-
-                </BlurFade>
-              ))}
-            
-
-            </div>
-          </div>
-        </section>
       </section>
-      <div className="item-center flex p-4">
-              <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
-              <IconCloud iconSlugs={slugs}></IconCloud>
-              </div>
-              </div>
 
       {/*
           <section id="work">

@@ -10,7 +10,7 @@ export const DATA = {
   description:
     "Equipe de 2 développeurs Fullstack en freelance sépcialisés Back-end & Front-end dans les applications web comme les SaaS.",
   summary:
-    "",
+    "Equipe de 2 développeurs Fullstack en freelance sépcialisés Back-end & Front-end dans les applications web comme les SaaS.",
   avatarUrl: "/me.png",
   skills: [
     "TypeScript",
